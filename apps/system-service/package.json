@@ -1,0 +1,30 @@
+{
+  "name": "@nexos/system-service",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@nexos/config": "workspace:*",
+    "@nexos/core": "workspace:*",
+    "@nexos/events": "workspace:*",
+    "@nexos/filesystem": "workspace:*",
+    "@nexos/permissions": "workspace:*",
+    "@nexos/process-manager": "workspace:*",
+    "@nexos/runtime": "workspace:*",
+    "@nexos/storage": "workspace:*",
+    "@nexos/types": "workspace:*",
+    "zod": "^3.25.76"
+  }
+}
